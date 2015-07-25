@@ -42,6 +42,8 @@ The `data` must be short enough to be encoded using the given `version` and `lev
 (QR-encode-string "hello world!")
 ```
 
+You can also try running `./examples/encode-ascii.scm "STRING TO ENCODE"` to create an ASCII QR code.
+
 ## Version history
 ### Version 0.1.0
 * Initial release
