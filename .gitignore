@@ -1,0 +1,7 @@
+*#
+*.import.scm
+*.types
+*.so
+*.o
+salmonella.log
+README.svnwiki

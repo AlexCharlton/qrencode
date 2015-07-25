@@ -1,0 +1,9 @@
+;; qrencode.meta -*- scheme -*-
+
+((synopsis "QR Code encoding - Bindings to libqrencode")
+ (author "Alex Charlton")
+ (category graphics)
+ (license "BSD-2-Clause")
+ (depends)
+ (test-depends test)
+ (foreign-depends))

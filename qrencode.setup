@@ -1,0 +1,18 @@
+;; qrencode.setup -*- scheme -*-
+(define compile-options
+  "-O3 -d0")
+
+(compile ,compile-options -J -s qrencode.scm
+         -Iqrencode ./qrencode/*.c
+         ;; Defines for libqrencode
+         -C"-D__STATIC=static"
+         -C"-DMAJOR_VERSION=\"3\""
+         -C"-DMINOR_VERSION=\"9\""
+         -C"-DMICRO_VERSION=\"0\""
+         -C"-DVERSION=\"3.9.0\"")
+(compile ,compile-options -s qrencode.import.scm)
+
+(install-extension
+ 'qrencode
+ '("qrencode.so" "qrencode.import.so")
+ '((version "0.1.0")))
